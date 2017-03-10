@@ -1,5 +1,5 @@
 # 1 merging data
-setwd('/Users/heather/Documents/UCI HAR Dataset/');
+setwd('C:\\Users\\Lenovo\\Documents\\UCI HAR Dataset');
 
 features     = read.table('./features.txt',header=FALSE); #imports features.txt
 activityType = read.table('./activity_labels.txt',header=FALSE); #imports activity_labels.txt
@@ -66,4 +66,4 @@ tidyData    = aggregate(finalDataNoActivityType[,names(finalDataNoActivityType) 
 
 tidyData    = merge(tidyData,activityType,by='activityId',all.x=TRUE);
 
-write.table(tidyData, './tidyData.txt',row.names=TRUE,sep='\t')
+write.table(tidyData, './tidyData.txt',row.names=FALSE,sep='\t')
